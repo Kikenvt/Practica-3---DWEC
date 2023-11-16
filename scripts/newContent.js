@@ -127,6 +127,25 @@ const randomNum = Math.floor(Math.random() * 100 +1)
         document.write(`Naciste un feliz dia de <strong>${estacion(diaNac, mesNac)}</strong> de <strong>${anoNac}</strong> <br>`)
         document.write(`El coseno de 180 es: ${coseno} <br>`)
         document.write(`El número mayor de <strong>(${nums})</strong> es ${findBiggestNum(nums)} <br>`)
-        document.write(`Ejemplo de número al azar entre 0 y 100 es: ${randomNum}`)
+        document.write(`Ejemplo de número al azar entre 0 y 100 es: ${randomNum} <br>`)
     document.close()
+
+const windowBtn = document.createElement('button')
+windowBtn.innerText = 'Abrir ventana'
+document.body.appendChild(windowBtn)
+
+const resetBtn = document.createElement('button')
+resetBtn.innerText = 'Reiniciar'
+document.body.appendChild(resetBtn)
+
+
+
+resetBtn.addEventListener("click", ()=>{
+    window.location.reload()
+})
+
+windowBtn.addEventListener("click", ()=>{
+    window.open('/templates/newWindow.html', 'Tarea 03 - DWEC', 'width=1000,height=1000,toolbar=no, resizable=no' )
+})
+
 }

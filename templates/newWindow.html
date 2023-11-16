@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 03 - DWEV</title>
+</head>
+<body>
+    <script>
+        document.write('<h1>Ejemplo de ventana Nueva</h1> <br>')
+        document.write(`<strong>URL completa: </strong> ${window.location.href} <br>`)
+        document.write(`Protocolo utilizado: ${window.location.protocol} <br>`)
+        document.write(`<iframe src="https://hotellallastra.app/inicio" width="800" height="600" </iframe> <br>`) // Puse esta web porque muchas tienen bloqueado que se puedan incrustar
+        
+        const exitBtn = document.createElement('button')
+        exitBtn.innerText = 'Cerrar'
+        document.body.appendChild(exitBtn)
+        exitBtn.addEventListener("click", ()=>{
+            window.close()
+        })
+
+    </script>
+    
+</body>
+</html>
